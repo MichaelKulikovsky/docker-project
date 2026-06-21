@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Management</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <main class="dashboard-container">
+      <header class="dashboard-header">
+        <h1>Users Management</h1>
+        <span style="font-weight: bold; font-size: 18px;">Total Users: <span id="totalUsers">0</span></span>
+        <button class="btn-primary">Add New User 👤 ➕ </button>
+      </header>
+
+      <div class="table-wrapper">
+        <table class="users-table">
+          <thead>
+            <tr>
+              <th class="checkbox-col">
+                <input type="checkbox" class="custom-checkbox" />
+              </th>
+              <th>User</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="api.js"></script>
+  </body>
+</html>

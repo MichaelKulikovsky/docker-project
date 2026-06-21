@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:3000
+
+### כל המשתמשים
+GET {{baseUrl}}/api/users
+
+### הוספת משתמש חדש
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+    "name": "Michael Israeli",
+    "email": "Michael@example.com",
+    "role": "Engineer",
+    "status": "Active", 
+    "phone": "0508895623" ,
+    "image": "https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png"
+}
+
+### מחיקת משתמש 
+DELETE {{baseUrl}}/api/users/REPLACE_WITH_MONGO_ID
