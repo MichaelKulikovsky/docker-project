@@ -14,9 +14,12 @@ app.use(cors({
     origin: "http://127.0.0.1:5500"
 }));
 
-// מסלול ראשי
+// הגדרת התיקייה הנוכחית להגשת קבצים סטטיים (כמו index.html ו-style.css)
+app.use(express.static(__dirname));
+
+// מסלול ראשי - יציג כעת את קובץ ה-index.html שלך
 app.get("/", (req, res) => {
-    res.send('Welcome to our user management app.');
+    res.sendFile(__dirname + '/index.html');
 });
 
 // ניתוב הבקשות לראוטר המשתמשים
@@ -25,5 +28,4 @@ app.use("/api/users", usersRoutes);
 app.listen(port, () => {
     console.log(`App is running on http://localhost:${port}`);
 });
-
 
