@@ -25,4 +25,3 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOKERHUB_USERNAME }}/node:latest
-
