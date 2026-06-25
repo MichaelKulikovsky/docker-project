@@ -7,7 +7,7 @@ const connectDB = async () => {
             throw new Error("DB_NAME is not defined in .env.local file!");
         }
 
-        const uri = `mongodb://mongo:27017/${process.env.DB_NAME}`;
+        const uri = process.env.MONGO_URI || `mongodb://mongo:27017/${process.env.DB_NAME}`;
         await mongoose.connect(uri);
         console.log(`MongoDB connected successfully to: ${process.env.DB_NAME}`);
     } catch (error) {
