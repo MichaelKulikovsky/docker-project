@@ -3,13 +3,11 @@ require('dotenv').config({ path: '.env.local' });
 
 const connectDB = async () => {
     try {
-        if (!process.env.DB_NAME) {
-            throw new Error("DB_NAME is not defined in .env.local file!");
-        }
-
+        // אם קיים משתנה סביבה MONGO_URI בענן, נתחבר אליו. אחרת, ל-Docker המקומי
         const uri = process.env.MONGO_URI || `mongodb://mongo:27017/${process.env.DB_NAME}`;
+        
         await mongoose.connect(uri);
-        console.log(`MongoDB connected successfully to: ${process.env.DB_NAME}`);
+        console.log(`MongoDB connected successfully.`);
     } catch (error) {
         console.error("DB connection failed:", error.message);
         process.exit(1);
@@ -17,3 +15,11 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
+
+
+
+
+
+
+// mongodb+srv://michaelkulikovsky_db_user:<db_password>@cluster0.ngvh0sg.mongodb.net/?appName=Cluster0
