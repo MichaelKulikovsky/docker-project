@@ -18,9 +18,11 @@ const users = [
 
 async function insertUsers() {
     try {
-        const uri = `mongodb://localhost:27017/${process.env.DB_NAME}`;
+        // שימוש במשתנה הסביבה של הענן (MONGO_URI), ואם לא קיים - יחזור לשרת המקומי כגיבוי
+        const uri = process.env.MONGO_URI || `mongodb://localhost:27017/${process.env.DB_NAME}`;
+        
         await mongoose.connect(uri);
-        console.log(`MongoDB connected successfully to: ${process.env.DB_NAME}`);
+        console.log(`MongoDB connected successfully.`);
 
         await User.deleteMany({});
         await User.insertMany(users);
