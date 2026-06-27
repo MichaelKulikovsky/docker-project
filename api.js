@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/users';
+const API_URL = '/api/users';
 
 //  שליפת כל המשתמשים וטעינתם לטבלה
 async function loadUsers() {
