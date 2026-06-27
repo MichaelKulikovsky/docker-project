@@ -22,4 +22,3 @@ module.exports = connectDB;
 
 
 
-// mongodb+srv://michaelkulikovsky_db_user:<db_password>@cluster0.ngvh0sg.mongodb.net/?appName=Cluster0
