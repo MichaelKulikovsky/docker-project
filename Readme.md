@@ -209,7 +209,7 @@ This project focuses on applying backend engineering concepts such as:
 
 **Michael Kulikovsky**
 
-Devops Engenner 
+Devops Engוnner student
 
 Passionate about building scalable backend applications and continuously improving software engineering skills.
 
