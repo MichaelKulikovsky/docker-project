@@ -10,9 +10,8 @@ connectDB();
 
 // הגדרת לקבלת נתונים בפורמט ואיפשור תקשורת
 app.use(express.json());
-app.use(cors({
-    origin: "http://127.0.0.1:5500"
-}));
+// אפשר גישה מכל מקור (מתאים גם לפיתוח מקומי וגם לענן)
+app.use(cors());
 
 // הגדרת התיקייה הנוכחית להגשת קבצים סטטיים (כמו index.html ו-style.css)
 app.use(express.static(__dirname));
